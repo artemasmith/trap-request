@@ -1,0 +1,14 @@
+table.table.table-bordered
+  tr
+    th= t "remote_ip"
+    th= t "request_method"
+    th= t "query_string"
+    th= t "created"
+    td
+  -@requests.each do |req|
+    tr
+      td= req.remote_ip
+      td= req.request_method
+      td= req.query_string
+      td= req.created_at
+      td= link_to 'details', request_details_path(id: req.id, trap_id: req.name), class: 'btn btn-default'

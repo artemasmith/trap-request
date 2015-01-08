@@ -1,0 +1,34 @@
+h3= t "requset.details"
+
+=link_to t('back'), request_all_path(trap_id: @request.name), class: 'btn btn-default'
+
+table.table.table-bordered
+  tr
+    th= t "name"
+    th= t "remote_ip"
+    th= t "request_method"
+    th= t "query_string"
+    th= t "created"
+    th= t "scheme"
+    th= t "query_params"
+    th= t "authorization"
+  tr
+    td= @request.name
+    td= @request.remote_ip
+    td= @request.request_method
+    td= @request.query_string
+    td= @request.created_at
+    td= @request.scheme
+    td= @request.query_params
+    td= @request.authorization
+
+
+table.table.table-bordered
+  tr
+    th= t "cookies"
+    th= t "headers"
+    th= t "raw_data"
+  tr
+    td= @request.cookies
+    td= @request.headers
+    td= @request.raw_data

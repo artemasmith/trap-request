@@ -1,0 +1,6 @@
+h1= t "Requests"
+
+- if @requests.present?
+  =render 'requests/all'
+- else
+  = render 'requests/one'

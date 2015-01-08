@@ -1,0 +1,20 @@
+h2= 'Request'
+.row
+  ="cookies "
+  =request.send(:cookies)
+.row
+  =request.remote_ip
+.row
+  =request.request_method
+.row
+  br
+  = "BODY"
+  = request.raw_post()
+.row
+  =request.headers.map{|k,v| "#{k} #{v}"}.join(';')
+.row
+  = request.query_parameters
+.row
+  =request.to_s
+
+
