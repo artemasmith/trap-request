@@ -9,6 +9,10 @@ class RequestsController < ApplicationController
         flash[:error] = t('wrong_url')
         redirect_to instruction_path
       end
+      respond_to do |format|
+        format.html
+        format.js
+      end
     end
   end
 

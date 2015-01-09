@@ -1,4 +1,5 @@
-table.table.table-bordered
+.hidden.trap-id tid="#{params[:trap_id]}"
+table.table.table-bordered.all-requests
   tr
     th= t "remote_ip"
     th= t "request_method"
@@ -12,3 +13,5 @@ table.table.table-bordered
       td= req.query_string
       td= req.created_at
       td= link_to 'details', request_details_path(id: req.id, trap_id: req.name), class: 'btn btn-default'
+
+

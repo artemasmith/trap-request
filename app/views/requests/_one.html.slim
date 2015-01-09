@@ -22,8 +22,9 @@ table.table.table-bordered
     td= @request.query_params
     td= @request.authorization
 
-
-table.table.table-bordered
+.btn.btn-primary onclick="$('.lots-of-data').removeClass('hidden')"
+  =t "show"
+table.table.table-bordered.hidden.lots-of-data
   tr
     th= t "cookies"
     th= t "headers"
